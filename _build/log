@@ -1,0 +1,107 @@
+# /mnt/commetud/GEI/OCaml/.opam/4.14.0/bin/dune utop
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Workspace root: /home/nbastin/Documents/4IR/ocaml/ocaml-maxflow-project
+# Auto-detected concurrency: 6
+$ /mnt/commetud/GEI/OCaml/.opam/4.14.0/bin/ocamlc.opt -config > /tmp/dune_01b0a7_output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; ocaml_bin = External "/mnt/commetud/GEI/OCaml/.opam/4.14.0/bin"
+#  ; ocaml = Ok External "/mnt/commetud/GEI/OCaml/.opam/4.14.0/bin/ocaml"
+#  ; ocamlc = External "/mnt/commetud/GEI/OCaml/.opam/4.14.0/bin/ocamlc.opt"
+#  ; ocamlopt =
+#      Ok External "/mnt/commetud/GEI/OCaml/.opam/4.14.0/bin/ocamlopt.opt"
+#  ; ocamldep =
+#      Ok External "/mnt/commetud/GEI/OCaml/.opam/4.14.0/bin/ocamldep.opt"
+#  ; ocamlmklib =
+#      Ok External "/mnt/commetud/GEI/OCaml/.opam/4.14.0/bin/ocamlmklib.opt"
+#  ; installed_env =
+#      map
+#        { "INSIDE_DUNE" :
+#            "/home/nbastin/Documents/4IR/ocaml/ocaml-maxflow-project/_build/default"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_paths = [ External "/mnt/commetud/GEI/OCaml/.opam/4.14.0/lib" ]
+#  ; ocaml_config =
+#      { version = "4.14.0"
+#      ; standard_library_default =
+#          "/mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/ocaml"
+#      ; standard_library = "/mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "gcc"
+#      ; ocamlc_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread"; "-fPIC" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
+#      ; ocamlopt_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread"; "-fPIC" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
+#      ; bytecomp_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-ldl"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ]
+#      ; native_c_libraries = [ "-lm"; "-ldl" ]
+#      ; native_pack_linker = [ "ld"; "-r"; "-o" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "linux"
+#      ; asm = [ "as" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-pc-linux-gnu"
+#      ; target = "x86_64-pc-linux-gnu"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X031"
+#      ; cmi_magic_number = "Caml1999I031"
+#      ; cmo_magic_number = "Caml1999O031"
+#      ; cma_magic_number = "Caml1999A031"
+#      ; cmx_magic_number = "Caml1999Y031"
+#      ; cmxa_magic_number = "Caml1999Z031"
+#      ; ast_impl_magic_number = "Caml1999M031"
+#      ; ast_intf_magic_number = "Caml1999N031"
+#      ; cmxs_magic_number = "Caml1999D031"
+#      ; cmt_magic_number = "Caml1999T031"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  ; instrument_with = []
+#  }
+$ (cd _build/default && /mnt/commetud/GEI/OCaml/.opam/4.14.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -24 -g -bin-annot -I .utop/.utop.eobjs/byte -I /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/bytes -I /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/findlib -I /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/lambda-term -I /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/logs -I /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/lwt -I /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/lwt/unix -I /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/lwt_react -I /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/mew -I /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/mew_vi -I /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/ocaml/compiler-libs -I /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/ocaml/threads -I /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/ocplib-endian -I /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/ocplib-endian/bigstring -I /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/react -I /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/result -I /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/trie -I /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/uchar -I /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/utop -I /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/uucp -I /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/uuseg -I /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/uutf -I /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/zed -no-alias-deps -o .utop/.utop.eobjs/byte/dune__exe__Utop.cmo -c -impl .utop/utop.ml-gen)
+$ (cd _build/default && /mnt/commetud/GEI/OCaml/.opam/4.14.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -24 -g -o .utop/utop.bc /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/ocaml/compiler-libs/ocamlcommon.cma /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/ocaml/compiler-libs/ocamlbytecomp.cma /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/ocaml/compiler-libs/ocamltoplevel.cma /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/findlib/findlib.cma /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/findlib/findlib_top.cma /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/logs/logs.cma /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/lwt/lwt.cma /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/logs/logs_lwt.cma /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/ocaml/unix.cma /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/ocaml/bigarray.cma /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/ocplib-endian/ocplib_endian.cma /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/ocplib-endian/bigstring/ocplib_endian_bigstring.cma /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/ocaml/threads/threads.cma /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/lwt/unix/lwt_unix.cma -I /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/lwt/../stublibs /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/react/react.cma /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/lwt_react/lwt_react.cma /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/result/result.cma /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/uutf/uutf.cma /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/uucp/uucp.cma /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/uuseg/uuseg.cma /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/zed/zed.cma /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/trie/trie.cma /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/mew/mew.cma /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/mew_vi/mew_vi.cma /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/lambda-term/lambda_term.cma -I /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/lambda-term/../stublibs /mnt/commetud/GEI/OCaml/.opam/4.14.0/lib/utop/uTop.cma .utop/.utop.eobjs/byte/dune__exe__Utop.cmo -linkall -warn-error -31)
