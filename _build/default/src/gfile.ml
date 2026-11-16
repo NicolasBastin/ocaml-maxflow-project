@@ -112,3 +112,16 @@ let from_file path =
   close_in infile ;
   final_graph
   
+let export path graph =
+  let ff = open_out path in
+  fprintf ff "digraph g {\n";
+  fprintf ff"node [shape = circle];\n";
+  n_iter graph (fun id -> fprintf ff "%d -> %d [label = \"%s\" ]; \n" arc.src arc.t id);
+  let _ = e_fold graph (fun count arc -> fprintf ff "e %d %d %d %s\n" arc.src arc.tgt count arc.lbl ; count + 1) 0 in
+  fprintf ff "\n%% End of graph\n" ;
+  close_out ff ;
+  ()
+
+
+let () = export "/home/nbastin/Documents/4IR" (from_file "/home/nbastin/Documents/4IR/ocaml/ocaml-maxflow-project/graphs/graph1.txt")
+

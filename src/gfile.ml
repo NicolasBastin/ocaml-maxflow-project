@@ -116,8 +116,7 @@ let export path graph =
   let ff = open_out path in
   fprintf ff "digraph g {\n";
   fprintf ff"node [shape = circle];\n";
-  n_iter graph (fun id -> fprintf ff "%d -> %d [label = \"%s\" ]; \n" arc.src arc.t id);
-  let _ = e_fold graph (fun count arc -> fprintf ff "e %d %d %d %s\n" arc.src arc.tgt count arc.lbl ; count + 1) 0 in
+  e_iter graph (fun arc -> fprintf ff "%d -> %d [label = \"%s\" ]; \n" arc.src arc.tgt arc.lbl);
   fprintf ff "\n%% End of graph\n" ;
   close_out ff ;
   ()
