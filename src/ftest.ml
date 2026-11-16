@@ -7,10 +7,10 @@ let () =
     begin
       Printf.printf
         "\n ✻  Usage: %s infile source sink outfile\n\n%s%!" Sys.argv.(0)
-        ("    🟄  infile  : input file containing a graph\n" ^
-         "    🟄  source  : identifier of the source vertex (used by the ford-fulkerson algorithm)\n" ^
-         "    🟄  sink    : identifier of the sink vertex (ditto)\n" ^
-         "    🟄  outfile : output file in which the result should be written.\n\n") ;
+        ("      infile  : input file containing a graph\n" ^
+         "      source  : identifier of the source vertex (used by the ford-fulkerson algorithm)\n" ^
+         "      sink    : identifier of the sink vertex (ditto)\n" ^
+         "      outfile : output file in which the result should be written.\n\n") ;
       exit 0
     end ;
 
@@ -28,8 +28,6 @@ let () =
   (* Open file *)
   let graph = from_file infile in
 
-  (* Rewrite the graph that has been read. *)
-  let () = write_file outfile graph in
-
+  (* Export the graph to dot format (Graphviz) *)
+  let () = export outfile graph in
   ()
-

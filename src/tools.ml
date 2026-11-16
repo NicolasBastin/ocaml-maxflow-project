@@ -8,5 +8,5 @@ let gmap gr f = e_fold gr (fun b_graph arc -> new_arc b_graph {arc with lbl = f 
 
 let add_arc gr n1 n2 v =
   match find_arc gr n1 n2 with
-  |Some arc -> new_arc gr {arc with lbl = (arc.lbl + v)}
-  |None -> new_arc gr {src=n1; tgt=n2; lbl=v}
+  |Some arc -> new_arc gr (arc with arc.lbl += v)
+  |None -> new_arc gr 
