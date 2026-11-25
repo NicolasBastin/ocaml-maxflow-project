@@ -30,7 +30,19 @@ let trouve_chemin gr source puit =
       in
       explore_voisins arcs
     in 
-    dfs [] source
+    dfs [] source;;
+
+
+let recup_arc_gr gr = e_fold gr (fun acc arc -> arc::acc) []
+let createGraphEcart gr =
+  let liste_arcs = (recup_arc_gr gr) in
+  let rec aux liste acu gr = 
+  match liste with
+    |[] -> acu
+    |{src=n1 ; tgt= n2 ; _ }::rest -> aux rest (add_arc acu n2 n1 0) gr 
+  in aux liste_arcs gr gr
+;;
+
   
 
   (*

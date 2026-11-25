@@ -35,6 +35,9 @@ let () =
     Printf.printf "Fin";
   );
 
+  let graph1 = Tools.gmap (Tools.createGraphEcart (Tools.gmap graph int_of_string)) string_of_int in 
+  
+  
   (* Export the graph to dot format (Graphviz) *)
-  let () = export outfile graph in
+  let () = export outfile graph1 in
   ()

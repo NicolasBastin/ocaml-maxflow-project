@@ -19,11 +19,12 @@ edit:
 
 demo: build
 	@echo "\n   ⚡  EXECUTING  ⚡\n"
-	./ftest.exe graphs/${graph} $(src) $(dst) outfile
+	./ftest.exe graphs/${graph} $(src) $(dst) outfile 
 	@echo "\n   🥁  RESULT (content of outfile)  🥁\n"
 	@cat outfile
+	dot -Tsvg outfile > resultat.svg 
 
 clean:
 	find -L . -name "*~" -delete
-	rm -f *.exe
-	dune clean
+	rm -f *.exe outfile resultat.svg
+	-dune clean
