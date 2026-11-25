@@ -1,5 +1,5 @@
 open Gfile
-    
+  
 let () =
 
   (* Check the number of command-line arguments *)
@@ -27,6 +27,13 @@ let () =
 
   (* Open file *)
   let graph = from_file infile in
+
+  (match Tools.trouve_chemin graph _source _sink with
+    |None -> Printf.printf "Echec, pas de chemin trouvé"
+    |Some path -> Printf.printf "Succès, chemin trouvé :";
+    List.iter (fun n -> Printf.printf "%d -> " n) path;
+    Printf.printf "Fin";
+  );
 
   (* Export the graph to dot format (Graphviz) *)
   let () = export outfile graph in

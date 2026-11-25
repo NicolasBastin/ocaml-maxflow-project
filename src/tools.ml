@@ -12,14 +12,26 @@ let add_arc gr n1 n2 v =
   |None -> new_arc gr {src=n1 ; tgt= n2 ; lbl=v } 
 
 let trouve_chemin gr source puit = 
-  let rec aux gr id acu liste_arcs =
-    match liste_arcs with
-    |[] -> 
-    |x::rest -> if (List.mem x acu) then aux gr id acu rest else 
-      if x.tgt=puit then acu else aux gr (x.tgt) (x::acu) (out_arcs gr x.tgt)
-  in aux gr source [] (out_arcs gr source)
-
-
+  let rec dfs visite actuel =
+    if actuel = puit then
+      Some [actuel]
+    else
+      let arcs = out_arcs gr actuel in
+      let rec explore_voisins liste_arcs =
+        match liste_arcs with
+        |[] -> None
+        |arc::rest -> 
+          if List.mem arc.tgt visite then
+            explore_voisins rest
+          else
+            match dfs (actuel::visite) arc.tgt with
+            |Some path -> Some (actuel::path)
+            |None -> explore_voisins rest
+      in
+      explore_voisins arcs
+    in 
+    dfs [] source
+  
 
   (*
   edge(a, b).
